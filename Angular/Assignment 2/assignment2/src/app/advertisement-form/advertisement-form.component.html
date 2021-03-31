@@ -1,0 +1,13 @@
+<div #userform (ngSubmit)="onSubmit()">
+<label>Title: </label>
+<input type="text">
+<label>Name: </label>
+<input id="{{name}}" type="text" value="Shalaka">
+<label>Category: </label>
+<select>
+    <option *ngFor="let Category of categories">{{Category}}</option>
+</select>
+<label>Description: </label>
+<input type="text">
+<button type="submit">Submit form</button>
+</div>
