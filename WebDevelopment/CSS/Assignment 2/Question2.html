@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style>
+
+		h1 {
+			text-align: center;
+		}
+
+		body {
+			font-family: Calibri,Helvetica,Sans-serif;
+			background-color: #101820FF;
+			color: white;
+		}
+
+		.a input[type=text],input[type=date],input[type=tel],input[type=email],
+		.b input[type=text],input[type=file],select[id=Branch],
+		.data input[type=file]
+		{
+			display: block;
+			padding: 0.8rem;
+			margin-bottom: 15px;
+			width: 100%;
+		}
+
+		.personal,.education,.highlights,.additional{
+			border:2px solid orange;
+			font-size: 20px;
+			padding: 4rem;
+			margin-right: 8rem;
+			margin-left: 8rem;
+			margin-top: 4rem;
+			background-color: #F2AA4CFF;
+			color: black;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<form>
+			<h1>Employment Application Form</h1>
+			<center><p><b>Note: </b>Only for people from India</p></center>
+			
+			<fieldset class="personal">
+				<legend><b>Personal Details</b></legend>
+				<div  class="a">
+				<div>
+					<label for="fname">First Name: </label>
+					<input type="text" name="First Name" id="fname" placeholder="Enter first name here" required>
+				</div>
+				<div>
+					<label for="lname">Last Name:</label>
+					<input type="text" name="Last Name" id="lname" placeholder="Enter last name here" required>
+				</div>
+				<div>
+					<label for="dob">Birth Date: </label>
+					<input type="date" name="DOB" id="dob" required>
+				</div>
+				<div>
+					<label for="phone">Phone Number: </label>
+					<input type="tel" name="Phone" id="phone" placeholder="Enter 10 digit number" required>
+				</div>
+				<div>
+					<label for="email">E-mail Address: </label>
+					<input type="email" name="email" id="email" placeholder="ex:abc@example.com" required>
+				</div>
+				<div>
+					<label for="gender">Gender: </label>
+					<p>
+						<input type="radio" name="gender" id=gender>Male<br>
+						<input type="radio" name="gender" id="gender">Female<br>
+						<input type="radio" name="gender" id="gender">Other<br>
+					</p>
+				</div>
+				<div>
+					<label for="address">Address: </label>
+					<input type="text" name="street" id="address" placeholder="Address Line 1" required>
+					<input type="text" name="area" id="address" placeholder="Address Line 2">
+					<input type="text" name="city" id="address" placeholder="City">
+					<input type="text" name="state" id="address" placeholder="State" required>
+					<input type="text" name="zip" id="address" placeholder="Postal/zip code" pattern="^[1-9][0-9]{5}$" required>
+				</div>
+				</div>
+			</fieldset>
+			
+			<fieldset class="education">
+				<legend><b>Qualification Details</b></legend>
+				<div class="b">
+				<div>
+					<center><label for="classx"><b>Class X</b></label></center><br>
+					Board: <input type="text" name="Board" id="classx" placeholder="CBSE/ICSE/State board" required>
+					Percentage: <input type="text" name="percentage" id="classx" placeholder="Percentage or CGPA" required>
+					Year of passing: <input type="text" name="year" id="classx" required>
+					Marksheet: <input type="file" name="marksheet" id="classx" required>
+				</div>
+				<br>
+				<div>
+					<center><label for="classxii"><b>Class XII</b></label></center><br>
+					Board: <input type="text" name="board" id="classxii"
+					placeholder="CBSE/ICSE/State board" required>
+					Percentage: <input type="text" name="percentage" id="classxii" placeholder="Percentage or CGPA" required>
+					Year of passing: <input type="text" name="year" id="classxii" required>
+					Marksheet: <input type="file" name="marksheet" id="classxii" required>
+				</div>
+				<br>
+				<div>
+					<center><label for="grd"><b>Graduation</b></label></center><br>
+					University: <input type="text" name="university" id="grd" placeholder="University name" required>
+					College: <input type="text" name="college" id="grd" placeholder="college name" required>
+					<label for="Branch" required>Branch: </label>
+					<select id="Branch">
+						<option>Computer Engineering</option>
+						<option>Electronics & Communication Engineering</option>
+						<option>Electronics & Computer Engineering</option>
+						<option>Mechanical Engineering</option>
+					</select>
+					Percentage: <input type="text" name="percentage" id="grd" placeholder="Percentage or CGPA" required>
+					Year of passing: <input type="text" name="year" id="grd">
+					Marksheet: <input type="file" name="marksheet" id="grd" required>
+				</div>
+				</div>
+			</fieldset>
+			
+			<fieldset class="highlights">
+				<legend><b>Highlights</b></legend>
+				<div class="data">
+				<div>
+					<label for="ts" ><b>Technical Skills</b></label><br>
+					<input type="checkbox" name="skill1" id="ts">C/C++<br>
+					<input type="checkbox" name="skill2" id="ts">Java<br>
+					<input type="checkbox" name="skill3" id="ts">HTML/CSS/JS<br>
+					<input type="checkbox" name="skill4" id="ts">Internet of Things (IOT)<br>
+					<input type="checkbox" name="skill5" id="ts">Machine Learning<br>
+					<input type="checkbox" name="skill6" id="ts">Digital Electronics<br>
+					<input type="checkbox" name="skill7" id="ts">AutoCAD<br>
+					<input type="checkbox" name="skill8" id="ts">Python<br>
+				</div>
+				<br>
+				<div>
+					<label><b>Training/Internship</b></label><br>
+					<textarea style="display:block"; placeholder="Enter details of your training or internship"></textarea>
+				</div>
+				<br>
+				<div>
+					<label for="cs"><b>Certifications</b></label>
+					<textarea style="display:block"; placeholder="Certification details"></textarea>
+					<input type="file" name="proofs" id="cs" multiple>
+				</div>
+				<div>
+					<label><b>Resume</b></label>
+					<input type="file" name="resume" required>
+				</div>
+				</div>
+			</fieldset>
+			
+			<fieldset class="additional">
+				<legend><b>Additional Information</b></legend>
+				<div>
+					<label for="info"><b>How did you come to know about us?</b></label><br>
+					<input type="checkbox" name="type1" id="info">Walk-In<br>
+					<input type="checkbox" name="type2" id="info">Social Media<br>
+					<input type="checkbox" name="type3" id="info">Newspaper<br>
+					<input type="checkbox" name="type4" id="info">Other (please specify)<br>
+					<textarea></textarea>
+				</div>
+			</fieldset>
+			
+			<center><button style="margin-top:5rem";><b>Send Application</b></button></center>
+		
+		</form>
+	</div>
+</body>
+</html>

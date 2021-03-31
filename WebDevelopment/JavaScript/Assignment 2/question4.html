@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Question 4</h1>
+<script>
+	function square(x)
+	{
+		return (x*x);
+	}
+	function MathSqrt(x)
+	{
+		return (Math.sqrt(x));
+	}
+	function map1(array,square)
+	{
+		list=[];
+		array.forEach(function(x)
+		{
+			list.push(square(x));
+		});
+		return list;
+	}
+	var newlist=map1([1,2,3,4,5],square);
+	console.log(newlist);
+	function map2(array,MathSqrt)
+	{
+		list=[];
+		array.forEach(function(x)
+		{
+			list.push(MathSqrt(x));
+		});
+		return list;
+	}
+	var newlist=map2([1,4,9,16,25],MathSqrt);
+	console.log(newlist);
+</script>
+</body>
+</html>

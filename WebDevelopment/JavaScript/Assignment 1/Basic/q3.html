@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function flipCoin()
+{
+	return Math.random()<0.5;
+}
+
+function getNumberOfCoins()
+{
+	var r=prompt("How many flips?");
+	if(!r)r=0;
+	return Math.floor(Number(r));
+}
+
+function numHeads()
+{
+	var f=getNumberOfCoins();
+	var heads=0;
+	var tails=0;
+	for(var i=0;i<f;i++)
+	{
+		flipCoin()?heads++:tails++;
+	}
+	{
+		alert("heads: "+heads+"\ntails: "+tails)
+	}
+}
+numHeads();
+</script>
+</body>
+</html>

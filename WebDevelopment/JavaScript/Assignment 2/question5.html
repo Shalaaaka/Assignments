@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html >
+<body>
+<script>
+function odd(nums, arr = []){
+  if (!nums.length) 
+  	return arr; 
+  if (nums[0] % 2 === 0) 
+  	arr.push(nums[0])
+  return odd(nums.slice(1), arr)
+};
+console.log(odd([1,3,5,4,2]));
+</script>
+</body>
+</html>

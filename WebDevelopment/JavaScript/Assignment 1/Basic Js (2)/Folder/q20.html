@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+const arr1=['a','b','c'];
+const arr2=[1,2,3];
+result=[arr1,arr2].reduce((r, a) => (a.forEach((a, i) => (r[i] = r[i] || []).push(a)), r), [])
+        .reduce((a, b) => a.concat(b));
+console.log(result);
+</script>
+</body>
+</html>

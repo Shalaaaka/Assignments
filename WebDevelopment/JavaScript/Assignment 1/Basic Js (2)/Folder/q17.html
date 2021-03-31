@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+const array=[1,2,3,4,5];
+console.log(array);
+function usingFor(arr)
+{
+	let sum=0;
+	for (let i=0;i<arr.length;i++)
+	{
+		sum+=arr[i];
+	}
+	console.log(sum);
+}
+usingFor(array);
+function usingWhile(arr)
+{
+	let i=0;
+	let sum=0;
+	while(i<arr.length)
+	{
+		sum+=arr[i];
+		i++;
+	}
+	console.log(sum);
+}
+usingWhile(array);
+function usingRecursion(input){
+    if (input.length == 0)
+    {
+        return 0;
+    } else
+    {
+       return input.shift() + usingRecursion(input);
+    }
+}
+
+console.log(usingRecursion(array));
+</script>
+</body>
+</html>

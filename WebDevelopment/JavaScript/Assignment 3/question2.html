@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Question 2</h1>
+<script>
+class Rectangle
+{
+	constructor(height)
+	{
+		this.height=height;
+	}
+	get area()
+	{
+		return this.height*this.width;
+	}
+}
+Rectangle.prototype.width=4;
+let myRectangle1=new Rectangle(6);
+console.log(myRectangle1.area);
+
+</script>
+</body>
+</html>

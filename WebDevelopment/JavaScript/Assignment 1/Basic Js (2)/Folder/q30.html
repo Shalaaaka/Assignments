@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+<body>
+<script>
+function translate(str) 
+{
+    str=str.toLowerCase();
+
+    if (["a", "e", "i", "o", "u"].indexOf(str[0]) > -1) 
+    {
+        return str=str+"way";
+    }
+   else 
+   {
+       for (var i = 0; i<str.length; i++)
+       {
+            if (["a", "e", "i", "o", "u"].indexOf(str[i]) > -1)
+            {
+            	var firstcons = str.slice(0, i);
+                var middle = str.slice(i, str.length);
+                str = middle+firstcons+"ay";
+                break;
+            }
+        }
+    }
+    return str;
+}
+console.log(translate("The quick brown box"));
+//Understanding require
+</script>
+</body>
+</html>

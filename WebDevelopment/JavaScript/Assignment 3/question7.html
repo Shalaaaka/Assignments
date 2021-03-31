@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Question 7</h1>
+<script>
+const json = '{ "fname": " ", "lname": " ","age": " ","skills": " ", "address":{"city": " ","pincode":" " },"dateOfBirth": " ","married": " ","profession": " "  }';
+const obj = JSON.parse(json);
+function print(fname,lname,age,skills,address,dateofbirth,married,profession)
+{
+this.fname=fname;
+this.lname=lname;
+this.age=age;
+this.skills=skills;
+this.address=address;
+this.dateofbirth=dateofbirth;
+this.married=married;
+this.profession=profession;
+}
+obj1=new print("shalaka","kale","21","skills",{city:"Pune",pincode:"411005"},"17 sep","false","student");
+console.log(obj1);
+obj2=new print("shala","kale","21","skills",{city:"Pune",pincode:"411005"},"18 sep","false","student");
+console.log(obj2);
+amithab=new print("amithab","bachan",22,["c"],{city:"hyderabad",pincode:"521185"},"24/10/1996","false","sr analyst");
+abhisheik=new print("abhisheik",21,"HTML","08/06/1997","true","jr analyst");
+Aaradhya=new print("Aaradhya",21,"HTML","08/06/1997","jr analyst");
+var abhisheik=Object.create(amithab);
+var Aaradhya=Object.create(amithab,abhisheik);
+console.log(amithab);
+console.log(abhisheik.lname);
+console.log(abhisheik.address);
+console.log(Aaradhya.married);
+console.log(Aaradhya.address);
+
+</script>
+</body>
+</html>

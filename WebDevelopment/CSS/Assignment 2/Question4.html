@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		
+		body,h1,h2,h3,h4,p {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, "Helvetica Neue",Helvetica, sans-serif;
+			font-size: 20px;
+			line-height: 1.6;
+		}
+		.title {
+			background-image: url(back1.jpg);
+			background-attachment: fixed;
+			background-size: cover;
+			background-position: center;
+			height: 100vh;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			padding; 0 10px;
+			color: white;
+		}
+		.main {
+			margin-right: 200px;
+		}
+		.primary-title {
+			font-size: 6rem;	
+		}
+
+		.btn {
+			display: inline-block;
+			text-decoration: none;
+			padding: 0.5em 1.25em;
+			background-color: green;
+			color: white;
+			border-radius: 0.25em;
+			margin-top: 50px;
+		}
+		.btn:hover{
+			font-weight: bold;
+		}
+		.section1 {
+			padding: 40px;
+			text-align: center;	
+		}
+		h2 {
+			background-color: white;
+			padding: 10px;
+			border-radius: 2rem;
+			width: auto;
+			display: inline-block;
+		}
+		.section2 {
+			display: grid;
+			grid-template-columns: auto auto auto;
+			text-align: center;
+			width: 100%;
+		}
+		.box1 {
+			grid-column: 1;
+			grid-row: 1;
+		}
+		.box2 {
+			grid-column: 2;
+			grid-row: 1;
+		}
+		.box3 {
+			grid-column: 3;
+			grid-row: 1;
+		}
+
+		.section2 .box2 {
+			background-color: #99ff99;
+			padding: 20px;
+		}
+		.section2 .box1,.box3{
+			background-color: green;
+			padding: 20px;
+		}
+		footer {
+			padding: 40px;
+			text-align: center;
+			font-size: 5px;
+		}
+		.cafe {
+			font-style: italic;
+		}
+	</style>
+</head>
+<body>
+	<header class="title">
+		<div class="main">
+			<h1 class="primary-title">MY<span class="cafe">cafe</span></h1>
+			<p><b>Hungry? Good, we are here to serve you!</b></p>
+			<a href="#s2" class="btn">Read More</a>
+		</div>
+	</header>
+
+	<section class="section1">
+		<h3>About Us</h3>
+		<p>
+			For the first time in Pune, MYcafe has brought the Open Kitchen restaurant and Fresh Beans Coffee varieties concept where you can enjoy a variety of dishes each prepared by the expert chef to give you the best dining experience. We provide you with a wide variety of dishes to choose from, each created with the perfection which you can enjoy with your family and friends in a peaceful environment. Upholding our motto of healthy eats wealthy treats, MYcafe only serves fresh, hygienic, and highest quality food to our valuable customers in a due time. With an open kitchen concept, we are established to fill up the need of a place where quality comes with consistency in terms of both foods and services, and a place where you can meet, relax and have a great time together.
+		</p>
+	</section>
+	<section class="section2" id="s2">
+		<div class="box1">
+			<h2>Our Vision</h2>
+			<p>To be the benchmark in hospitality sector for the quality and service we provide.</p>
+		</div>
+		<div class="box2">
+			<h2>Our Mission</h2>
+			<p>To serve healthy and hygienic food with unparalleled services with the high level of consistency to our valuable customers.</p>
+		</div>
+		<div class="box3">
+			<h2>Our Goal</h2>
+			<p>Our entire staff is committed to serving only the highest quality of food and Beverage. With a wide variety of menu items, there's sure to be something for everyone in your party to enjoy.</p>
+		</div>
+	</section>
+	<footer>
+		<h3>Contact Detail</h3>
+		<p><b>Email: </b>abc@gmail.com</p>
+		<p><b>Phone: </b>8888888888</p>
+		<p>All rights reserved 2021 MYcafe</p>
+	</footer>
+</body>
+</html>

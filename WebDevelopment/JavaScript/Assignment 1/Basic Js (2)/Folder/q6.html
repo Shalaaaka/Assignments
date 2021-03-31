@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+const number=prompt("Enter number");
+var ask=prompt("Sum or Product");
+let sum=0;
+if (ask=="Sum")
+{
+	for (let i = 1; i <= number; i++) 
+	{
+		sum += i;
+    }
+    console.log("Sum: ",sum);
+}
+let mul=1;
+if (ask=="Product")
+{
+	for (let i = 1; i <= number; i++) 
+	{
+		mul *= i;
+	}
+	console.log("Product: ",mul);
+}
+</script>
+</body>
+</html>

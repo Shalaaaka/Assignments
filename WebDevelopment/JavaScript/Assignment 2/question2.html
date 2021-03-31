@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Question 2</h1>
+<script>
+function square(x)
+{
+	return (x*x);
+}
+function double(x)
+{
+	return (x*2);
+}
+var x;
+function fun1(x)
+{
+	return (square(double(x)));
+}
+function fun2(x)
+{
+	return (double(square(x)));
+}
+function compose1(square, double)
+{
+	return fun1;
+}
+function compose2(square, double)
+{
+	return fun2;
+}
+var f1 = compose1(square, double);
+var output1 = f1(5);
+var output2 = f1(10);
+console.log(output1);
+document.write(output1);
+console.log(output2);
+document.write(output2);
+var f2 = compose2(double,square);
+var output3 = f2(5);
+var output4 = f2(10);
+console.log(output3);
+document.write(output3);
+console.log(output4);
+document.write(output4);
+</script>
+</body>
+</html>

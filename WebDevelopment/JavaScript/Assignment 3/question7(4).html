@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Question 7</h1>
+<script>
+var json1='{"accountNumber":"1","accountHolderName":"shalaka ","accountBalance":"1000","Savings":{"isSalary":"true"}}';
+var json2='{"accountNumber":" 2","accountHolderName":" Shala","accountBalance":"2000 ","Current":{"odLimit":"true"}}';
+var savingsObj=JSON.parse(json1);
+var currentObj=JSON.parse(json2);
+console.log(savingsObj);
+console.log(currentObj);
+
+function withdraw(amount)
+{
+  if (savingsObj.accountBalance > 0) 
+  {
+    savingsObj.accountBalance -= amount;
+    console.log("UpdatedBalance in SavingsAccount is: "+savingsObj.accountBalance);
+    return true;
+  }
+  else
+  {
+  	console.log("accountBalance should be greater than zero");
+  }
+  return false;
+}
+console.log(withdraw(10));
+</script>
+</body>
+</html>

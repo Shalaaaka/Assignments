@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+<body>
+<script>
+const array1 = [1,2,3,4,5];
+const array2=[1,4,9,16,25];
+const map1 = array1.map(x => x * x);
+console.log(map1);
+const map2 = array2.map(x => Math.sqrt(x));
+console.log(map2);
+
+
+function mapMethod (map1, map2) 
+{
+  if (map1.length === 0) 
+  {
+    return map2;
+}
+if (Array.isArray(map1[0])) 
+{
+    return mapMethod(map1[0].concat(map1.slice(1)), map2);
+}
+  map2.push(map1[0]);
+  return mapMethod(map1.slice(1), map2);
+}
+console.log(mapMethod(map1,map2));
+</script>
+</body>
+</html>

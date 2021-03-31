@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Question 7</h1>
+<script>
+function square(x)
+{
+	return (x*x);
+}
+console.log("square is "+square);
+console.log((function(x) { return x*x; })(5));
+var a=function(){
+	return String;
+}
+console.log(a);
+var sample = function() 
+{
+        return (function() 
+        { 
+            return "something"
+        })();
+}
+console.log(sample);
+document.write(sample);
+document.write(sample());
+</script>
+</body>
+</html>

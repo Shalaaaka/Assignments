@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Question 1</h1>
+<script>
+function square(x)
+{
+	return (x*x);
+}
+function double(x)
+{
+	return (x*2);
+}
+var x=5;
+function composedValue(square, double, x)
+{
+	return (square(double(x)));
+}
+var output = composedValue (square,double,5);
+console.log(output);
+document.write(output);
+</script>
+</body>
+</html>

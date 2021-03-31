@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var y = Math.floor(Math.random() * 10 + 1); 
+var guess = 1; 
+var x = prompt("Enter number");
+if (x==y)
+{
+	alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN " + guess + " GUESS ");
+}
+else if (x>y)
+{
+	guess++;
+	alert("OOPS SORRY!! TRY A SMALLER NUMBER");
+	prompt("Enter number");
+}
+else
+{
+	guess++;
+    alert("OOPS SORRY!! TRY A GREATER NUMBER");
+    prompt("Enter number");
+
+}
+</script>
+</body>
+</html>

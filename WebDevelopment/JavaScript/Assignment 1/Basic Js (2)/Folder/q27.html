@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html >
+<body>
+<script>
+function selectionSort(arr) 
+{ 
+    let l = arr.length;
+    for(let i = 0; i < l; i++) 
+    {
+        let min = i;
+        for(let j = i+1; j < l; j++)
+        {
+            if(arr[j] < arr[min]) 
+            {
+                min=j; 
+            }
+         }
+         if (min != i) 
+         {
+             let tmp = arr[i]; 
+             arr[i] = arr[min];
+             arr[min] = tmp;      
+        }
+    }
+    return arr;
+}
+console.log(selectionSort([1,5,3,4,2]));
+
+function insertionSort(arr) 
+{
+    let l = arr.length;
+        for (let i = 1; i < l; i++) 
+        {
+            let current = arr[i];
+            let j = i-1; 
+            while ((j > -1) && (current < arr[j])) 
+            {
+                arr[j+1] = arr[j];
+                j--;
+            }
+            arr[j+1] = current;
+        }
+    return arr;
+}
+console.log(insertionSort([1,5,3,4,2]));
+
+function merge(left, right) 
+{
+    let arr = []
+    while (left.length && right.length) 
+    {
+        if (left[0] < right[0]) 
+        {
+            arr.push(left.shift())  
+        } else {
+            arr.push(right.shift()) 
+        }
+    }    
+    return [ ...arr, ...left, ...right ]
+}
+function mergeSort(array) 
+{
+  const half = array.length / 2
+  if(array.length < 2)
+  {
+    return array 
+  }
+  const left = array.splice(0, half)
+  return merge(mergeSort(left),mergeSort(array))
+}
+console.log(mergeSort([1,5,3,2,4]));
+
+
+</script>
+</body>
+</html>
