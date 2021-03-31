@@ -1,0 +1,6 @@
+var num = 100;
+console.log(num);
+/*num=200;
+ERROR: Cannot assign to 'num' because it is a constant.
+Const variables must be declared and initialized in a single statement. Separate declaration and initialization is not supported.
+*/ 
