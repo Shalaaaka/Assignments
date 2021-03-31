@@ -1,0 +1,238 @@
+1. 
+$ docker -v
+Docker version 19.03.13, build 4484c46d9d
+
+2.
+$ docker pull nginx
+Using default tag: latest
+latest: Pulling from library/nginx
+ac2522cc7269: Pull complete 
+09de04de3c75: Pull complete 
+b0c8a51e6628: Pull complete 
+08b11a3d692c: Pull complete 
+a0e0e6bcfd2c: Pull complete 
+4fcb23e29ba1: Pull complete 
+Digest: sha256:b0ea179ab61c789ce759dbe491cc534e293428ad232d00df83ce44bf86261179
+Status: Downloaded newer image for nginx:latest
+docker.io/library/nginx:latest
+
+3.
+$ docker images
+REPOSITORY                                      TAG                 IMAGE ID            CREATED             SIZE
+nginx                                           latest              b8cf2cbeabb9        3 days ago          133MB
+
+4.
+$ docker images -q
+b8cf2cbeabb9
+
+5.
+$ docker run -it nginx
+
+6.
+$ docker ps
+
+7.
+$ docker start b8cf2cbeabb9
+$ docker stop b8cf2cbeabb9
+
+
+8.
+$ docker ps -q
+8913dfb2ecc8
+
+9.
+$ docker inspect nginx
+"Layers": [
+                "sha256:0270c2d5ad7267d4e20b234f5252bae2aa22b5fa0742b35a286d70532106269a",
+                "sha256:7ddea056b71a35e389d8afbd8644ee6d37db17b2680b4c54a91ce62acfd45522",
+                "sha256:199e51fa0f590e3bf130548d086fff9ab7beb978da6cec51c34d00f4c73e4b11",
+                "sha256:0e426deef675f1d2461fba6a82b162bcbb87e1329e56cadc5b60b1979ffede78",
+                "sha256:9cb4f14884ef94d8ab46910e7361b76abcd8e1fa625360a784f003d22dd2e676",
+                "sha256:00436d7e1be278738ccab0e1b928cfe5fc77a8d1aa6cedc527da67db03fd5f6d"
+            ]
+
+10.
+$ docker pull tomcat:7.0
+
+$ docker images
+REPOSITORY                                      TAG                 IMAGE ID            CREATED             SIZE
+tomcat                                          7.0                 b2a4185f737a        2 days ago          533MB
+
+11.
+$ docker ps -a
+CONTAINER ID        IMAGE                                          COMMAND                  CREATED              STATUS                            PORTS               NAMES
+a93c371edf6e        tomcat:7.0                                     "catalina.sh run"        About a minute ago   Exited (130) About a minute ago  
+
+12.
+$ docker inspect a93c371edf6e        
+
+13.
+$ docker inspect a93c371edf6e  
+
+14.
+$ docker run -it tomcat:7.0
+$ docker stats a93c371edf6e
+
+15.
+$ docker inspect tomcat:7.0
+$ docker system df
+
+16.
+"Env": [
+                "PATH=/usr/local/tomcat/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "JAVA_HOME=/usr/local/openjdk-8",
+                "LANG=C.UTF-8",
+                "JAVA_VERSION=8u282",
+                "CATALINA_HOME=/usr/local/tomcat",
+                "TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib",
+                "LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib",
+                "GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 61B832AC2F1C5A90F0F9B00A1C506407564C17A3 713DA88BE50911535FE716F5208B0AB1D63011C7 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23",
+                "TOMCAT_MAJOR=7",
+                "TOMCAT_VERSION=7.0.108",
+                "TOMCAT_SHA512=78961dd302e4398dc760bf9b93fd8f456d06f5a542535688b87320c2d5558d70168cddb0fd4d85965a453bd75c737d5237cf64bf9e40da93eebd957ee763946c"],
+
+17.
+"ExposedPorts": {
+                "8080/tcp": {}
+            },
+
+18.
+$ docker run tomcat:7.0
+
+19.
+$ docker pull ubuntu:18.04
+$ docker pull ubuntu:16.04
+$ docker images
+REPOSITORY                                      TAG                 IMAGE ID            CREATED             SIZE
+ubuntu                                          16.04               f6f49faac5cf        4 days ago          132MB
+ubuntu                                          18.04               3339fde08fc3        4 days ago          63.3MB
+
+20.
+$ docker run  ubuntu:16.04
+$ docker ps
+CONTAINER ID        IMAGE                                          COMMAND                  CREATED             STATUS              PORTS               NAMES
+
+21.
+$ docker run -d ubuntu:18.04
+
+22.
+$ docker ps
+
+23.
+$ docker run -it tomcat:7.0
+$ docker ps -a
+CONTAINER ID        IMAGE                                          COMMAND                  CREATED             STATUS                          PORTS               NAMES
+f2fab82f26f0        tomcat:7.0                                     "catalina.sh run"        2 minutes ago       Exited (130) 2 minutes ago 
+$ docker start f2fab82f26f0        
+
+24.
+$ docker logs f2fab82f26f0
+
+25.
+$ docker ps -a
+$ docker run ubuntu:16.04
+$ docker ps -a
+CONTAINER ID        IMAGE                                          COMMAND                  CREATED             STATUS                        PORTS               NAMES
+512b519e07f1        ubuntu:16.04                                   "/bin/bash"              6 seconds ago       Exited (0) 6 seconds ago 
+$ docker start 512b519e07f1        
+
+26.
+$ docker login ubuntu:16.04
+
+27.
+Create a file
+$ touch file
+$ vim file
+
+28.
+RUN apt-get install wget
+
+29.
+Now exit the ubuntu shell, are you back to your host machine, if not, come back to the host machine
+:q!
+
+30.
+$ docker ps -a
+$ cat file
+
+31.
+$ docker run ubuntu:18.04
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
+878a4ccb34a1        ubuntu:18.04        "/bin/bash"         8 seconds ago       Exited (0) 6 seconds ago                       amazing_johnson
+$ docker start 878a4ccb34a1
+878a4ccb34a1
+
+32.
+$ docker login 878a4ccb34a1
+
+33.
+$ docker rm 878a4ccb34a1
+878a4ccb34a1
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+34.
+$ docker ps -a
+
+35.
+$ docker build file / $ docker build .
+
+36.
+$ docker images
+$ docker run 113a45faal87
+
+37.
+$ docker ps -a
+$ docker rm f2fab82f26f0        
+f2fab82f26f0        
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+38.
+Create an index.html file with following code in it:-
+	<h1>This is Tomcat Container</h1>
+$ docker run tomcat:7.0
+$ dockr ps -a
+$ docker start tomcat:7.0
+$ docker exec -it a93c371edf6e html -a
+
+39.
+$ docker images --help
+
+  -a, --all             Show all images (default hides intermediate images)
+      --digests         Show digests
+  -f, --filter filter   Filter output based on conditions provided
+      --format string   Pretty-print images using a Go template
+      --no-trunc        Don't truncate output
+  -q, --quiet           Only show numeric IDs
+
+$ docker images -q
+b8cf2cbeabb9
+
+40.
+$ docker ps --help
+
+  -a, --all             Show all containers (default shows just running)
+  -f, --filter filter   Filter output based on conditions provided
+      --format string   Pretty-print containers using a Go template
+  -n, --last int        Show n last created containers (includes all states) (default -1)
+  -l, --latest          Show the latest created container (includes all states)
+      --no-trunc        Don't truncate output
+  -q, --quiet           Only display numeric IDs
+  -s, --size            Display total file sizes
+
+$ docker ps -q
+8913dfb2ecc8
+
+$ docker ps -a
+CONTAINER ID        IMAGE                                          COMMAND                  CREATED              STATUS                            PORTS               NAMES
+a93c371edf6e        tomcat:7.0                                     "catalina.sh run"        About a minute ago   Exited (130) About a minute ago  
+
+$ docker ps -s
+CONTAINER ID        IMAGE                                          COMMAND                  CREATED             STATUS              PORTS               NAMES                                                                                                                    SIZE
+42e51ab6e8e2        74188596f8cb                                   "katacoda-cloud-prov…"   35 seconds ago      Up 34 seconds                           k8s_katacoda-cloud-provider_katacoda-cloud-provider-58f89f7d9-swjsq_kube-system_db90b0ba-21cc-473f-bb4f-763913461e67_3   0B (virtual 116MB)
+
+$ docker ps -l
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS               NAMES
+fa6fc3cef0d1        74188596f8cb        "katacoda-cloud-prov…"   About a minute ago   Up About a minute                       k8s_katacoda-cloud-provider_katacoda-cloud-provider-58f89f7d9-swjsq_kube-system_db90b0ba-21cc-473f-bb4f-763913461e67_4
