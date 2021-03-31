@@ -1,4 +1,0 @@
-npm create-react-app App_Name
-cd App_Name
-npm start
-//localhost:3000
