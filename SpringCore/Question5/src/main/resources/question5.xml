@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+    <!-- To activate the '@Resource' annotation in the spring framework -->
+    <context:annotation-config />
+    
+    <bean id="myStudent" class="com.example.Student">
+    <property name="name" value="Shalaka"></property>
+    <!-- Required property -->
+    <property name="id" value="02"></property>
+    </bean>
+    <bean id="college" class="com.example.College">
+    <property name="college_Name" value="LPU"></property>
+    </bean>
+    <bean id="data" class="com.example.Data">
+    </bean>
+    </beans>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+        
+<beans>
+<bean class=" com.example.Question_Case1" id="case1">
+<property value="1" name="questionId"/>
+<property value="List of programming languages" name="question"/>
+<property name="answers">
+<list>
+<value>C</value>
+<value>C++</value>
+<value>Java</value>
+<value>Python</value>
+</list>
+</property>
+</bean>
+
+<bean class=" com.example.Question_Case2" id="case2">
+<property value="2" name="questionId"/>
+<property value="List of programming languages" name="question"/>
+<property name="answers">
+<set>
+<value>C</value>
+<value>C++</value>
+<value>Java</value>
+<value>Python</value>
+</set>
+</property>
+</bean>
+
+<bean class=" com.example.Question_Case3" id="case3">
+<property value="3" name="questionId"/>
+<property value="List of programming languages" name="question"/>
+<property name="answers">
+<map>
+<entry value="C" key="1"/>
+<entry value="C++" key="2"/>
+<entry value="Java" key="3"/>
+<entry value="Python" key="4"/>
+</map>
+</property>
+</bean>
+</beans>
+
