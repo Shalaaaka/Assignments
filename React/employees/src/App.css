@@ -1,0 +1,47 @@
+.App {
+ 
+  padding: 10%;
+
+}
+.Add-Employee
+{
+  padding: 10%;
+}
+
+#table tr,th,td
+{
+  border: 1px solid black;
+  padding: 1rem;
+  border-collapse: collapse;
+}
+
+.btn
+{
+  background-color: blue;
+  font-weight: bold;
+  color: white;
+  padding: 0.5em;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.btn:hover
+{
+  background-color:grey;
+}
+
+.form-group
+{
+  padding: 0.2rem;
+}
+
+.labelclass
+{
+  font-weight: bold;
+  display: block;
+}
+
+.form-control
+{
+  padding: 1%;
+}

@@ -1,0 +1,16 @@
+
+
+1. MySQL command line
+2. Password:shalaka
+3. Show databases;
+4. create databse nameOfDB;
+5. connect nameOfDB;
+6. CREATE TABLE `Employee` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  `department` varchar(45) NOT NULL,
+  `salary` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+7. show tables;
+8. desc table_name;

@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  padding: 10%;
+}
+#table tr,th,td
+{
+  padding: 5%;
+  text-align: center;
+  border: 1px solid black;
+
+}
+
+#table th{
+  background-color: rgb(72, 72, 145);
+}
+

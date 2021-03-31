@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+}
+.active_class
+{
+  text-decoration: none;
+  padding: 2%;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+ 
+}
+.active_class:hover
+{
+  cursor: pointer;
+  background-color: #ff0066;
+  
+}
+.navbar
+{
+  margin-top: 5%;
+}
+.title
+{
+  padding: 10%;
+}
+.span
+{
+  background-color: lightblue;
+  padding: 1%;
+  border-radius: 10%;
+}
